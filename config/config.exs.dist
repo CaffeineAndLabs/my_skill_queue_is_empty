@@ -1,0 +1,20 @@
+# This file is just template
+# Please modify @@TAG@@ for your need
+use Mix.Config
+
+config :my_skill_queue_is_empty,
+  api_key_id: "@@EVE_API_KEY_ID@@",
+  api_v_code: "@@EVE_API_VERIFICATION_CODE@@"
+
+# There you configure how do you want to send mail
+# The template is for Mailgun
+config :my_skill_queue_is_empty, MySkillQueueIsEmpty.Mailer,
+  adapter: Bamboo.MailgunAdapter,
+  api_key: "@@MAILGUN_API_KEY@@",
+  domain: "@@MAILGUN_DOMAIN@@"
+
+config :my_skill_queue_is_empty, MySkillQueueIsEmpty.Emails,
+  mail_to: "@@MAIL_TO@@",
+  mail_from: "@@MAIL_FROM@@",
+  mail_subject: "@@MAIL_SUBJECT@@",
+  mail_text_body: "@@MAIL_TEXT_BODY@@"
